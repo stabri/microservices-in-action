@@ -1,0 +1,11 @@
+version: '2'
+services:
+  licensingservice:
+      image: johncarnell/tmx-licensing-service:chapter2
+      ports:
+        - "8080:8080"
+      enviroment:
+        PROFILE: "dev"
+        CONFIGSERVER_URI: http://config-server:8888
+        CONFIGSERVER_PORT: "8888"
+        DATABASESERVER_PORT: "5432"
